@@ -1,0 +1,19 @@
+@mixin dFlex($jc:center, $ai: center, $g: 0, $fd: row){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+    flex-direction: $fd;
+}
+
+@mixin atfBg(){
+    background-color: #141D2F;
+    color: white;
+}
+
+$pPurple: #9747FF;
+$pGreen: #70E61C;
+
+body {
+    padding: 20px !important;
+  }
