@@ -1,0 +1,131 @@
+@import './../../app.component.scss';
+
+section {
+    scroll-margin-top: 100px;
+    position: relative;
+    z-index: 22;
+    margin-top: 100px;
+    @include dFlex($jc: space-between);
+    padding-left: $edgeDistance;
+    p {
+        max-width: 30vw;
+    }
+}
+
+.info {
+    @include dFlex($ai:flex-start,$fd: column);
+    z-index: 20;
+}
+
+.img-and-border-container {
+    z-index: 20;
+    @include dFlex($jc: flex-end);
+}
+
+.img-container {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include dFlex();
+    border: 4px solid $pGreen;
+    padding-top: 30px;
+    padding-right: 20px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    img {
+        
+        height: 400px;
+    }
+}
+
+.border-container {
+    width: 25vw;
+    height: 4px;
+    background: $pGreen;
+
+}
+
+.personal-info {
+    @include dFlex($g: 24px, $jc:space-between);
+    margin-top: 32px;
+    width: 30vw;
+    img{
+        width: 50px;
+    }
+}
+
+.purple-shadow {
+    position: absolute;
+    right: -350px;
+    top: -200px;
+    z-index: 10;
+    width: 650px;
+}
+
+@media (max-width: 2000px) {
+    section{
+        padding-left: $edgeDistance2000;
+    }
+}
+
+@media (max-width: 700px) {
+    section{
+        padding-left: $edgeDistanceMobile;
+        padding-right: $edgeDistanceMobile !important;
+    }
+    .purple-shadow {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .border-container {
+        width: 15vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .border-container {
+        width: 5vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .img-container {
+        // img {
+        //     height: 350px;
+        //     width: 350px;
+        // }
+    }
+
+    p {
+        max-width: 60vw !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .purple-shadow {
+        width: 500px;
+    }
+    .img-container {
+        display: none;
+    }
+
+    section{
+        padding-right: $edgeDistance2000;
+    }
+
+    .border-container{
+        display: none;
+    }
+
+    p {
+        max-width: none !important;
+    }
+
+    .personal-info {
+        max-width: none;
+        width: unset;
+    }
+}

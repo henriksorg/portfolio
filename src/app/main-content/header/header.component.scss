@@ -1,0 +1,64 @@
+
+@import './../../app.component.scss';
+
+section{
+    @include dFlex($jc: space-between);
+    @include atfBg();
+    background-color: unset;
+    padding: 37px $edgeDistance 37px $edgeDistance;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 25;        
+    span{
+        font-size: 28px;
+    }
+    a{
+        text-wrap: nowrap;
+        color: white;
+        font-size: 26px;
+    }
+}
+
+.henrik-font{
+    height: 60px;
+}
+
+.burger-menu{
+    display: none;
+}
+
+mat-icon{
+    transform: scale(3);
+}
+
+a{
+    padding: 10px 50px;
+    span{
+        font-size: 50px !important;
+    }
+}
+
+@media (max-width: 2000px){
+    section{
+        padding: 37px $edgeDistance2000 37px $edgeDistance2000;
+    }
+}
+
+@media (max-width: 700px){
+    section{
+        padding: 37px $edgeDistanceMobile 37px $edgeDistanceMobile;
+    }
+}
+
+@media (max-width: 1000px){
+    
+    .menu-display{
+        display: none;
+    }
+    .burger-menu{
+        display: unset;
+    }
+}   
+

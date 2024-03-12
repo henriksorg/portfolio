@@ -1,0 +1,38 @@
+<section id="contact">
+    <div class="headline"> 
+        <div class="border-div"></div>
+        <h2>Contact</h2>
+    </div>
+    
+    <div class="contact">
+        <div>
+            <h3>Do you need a Frontend Developer, or would you like to learn more about me?</h3>
+            <p>Feel free to contact me using the contact form for further information.</p>
+        </div>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <label for="name-input"></label>
+            <input [class.border-invalid]="name.invalid && (name.touched || contactForm.submitted)" #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" placeholder="Your name" required name="name">
+            <span *ngIf="(name.invalid  && name.touched || contactForm.submitted)" class="error-message" >Please enter name</span>
+
+            <label for="email-input"></label>
+            <input [class.border-invalid]="email.invalid && (email.touched || contactForm.submitted)" #email="ngModel" [(ngModel)] ="contactData.email" type="text" id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" name="email">
+            <span *ngIf="email.invalid  && (email.touched || contactForm.submitted)" class="error-message">Please enter email</span>
+
+            <label for="textare-input"></label>
+            <textarea [class.border-invalid]="message.invalid && (message.touched || contactForm.submitted)" #message="ngModel" [(ngModel)]="contactData.message" id="message" cols="10" rows="10" placeholder="Your message" required name="message"></textarea>
+            <span *ngIf="message.invalid  && (message.touched || contactForm.submitted)" class="error-message">Please enter message</span>
+            
+            <label class="container"><p>I've read the <a href="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</p>
+                <input type="checkbox" [(ngModel)]="contactData.agreedToPrivacyPolicy" name="agreedToPrivacyPolicy" required>
+                <span class="checkmark"></span>
+            </label>
+
+            <input id="submit" type="submit" [disabled]="!contactForm.form.valid" value="Send message :)">
+        </form>
+        <div class="dialog" *ngIf="dialogOpen">
+          <span>Thanks for contacting me! I will response in the next few days!</span>
+        </div>
+    </div>
+    <img src="./../../assets/img/png/contact-purple.png" alt="" class="purple-shadow" >
+    
+</section>

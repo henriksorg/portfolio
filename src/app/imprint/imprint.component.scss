@@ -1,0 +1,27 @@
+@import './../app.component.scss';
+
+section{
+    @include dFlex($fd:column, $jc:flex-start, $ai:flex-start, $g:16px);
+    padding: 100px $edgeDistance;
+    box-sizing: border-box;
+    height: calc(100vh - 287px);
+    span{
+        font-size: 24px;
+    }
+    .imprint{
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 2000px){
+    section{
+        padding: 50px $edgeDistance2000;
+    }
+}
+
+@media (max-width: 700px){
+    section{
+        padding: 50px $edgeDistanceMobile;
+    }
+}

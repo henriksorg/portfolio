@@ -1,8 +1,40 @@
 @import './assets/fonts/poppins.css';
 
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
 body {
     font-family: Poppins;
     background: #141D2F;
-    // background: white !important;
     color: white;
 }
+
+
+
+
+input, textarea{
+    font-family: Poppins;
+}
+
+h2{
+    font-size: 90px !important;
+    font-weight: 700;
+    margin-bottom: 50px !important;
+}
+
+@media (max-width: 700px){
+    h2{
+        font-size: 60px !important;
+    }
+}
+@media (max-width: 350px){
+    h2{
+        font-size: 45px !important;
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

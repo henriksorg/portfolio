@@ -1,0 +1,97 @@
+@import './../../app.component.scss';
+
+
+section{
+    scroll-margin-top: 120px;
+    margin-top: 200px;
+    @include dFlex($jc:space-between);
+    padding: 0 $edgeDistance 80px $edgeDistance;
+    position: relative;
+    z-index: 20;
+}
+
+.icons-container{
+    @include dFlex($jc:flex-start, $ai:flex-start,$g:80px);
+    flex-wrap: wrap;
+    z-index: 20;
+}
+
+.icons{
+    @include dFlex($fd:column, $g:10px);
+    min-width: 80px;
+    span{
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &:hover img{
+        transition: transform .1s ease;
+        transform: translateY(-20px);
+    }
+}
+
+.text{
+    margin-left: 80px;
+    @include dFlex($fd:column, $g:34px);
+    z-index: 20;
+}
+
+button{
+    background-color: $pGreen;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px 15px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 23px;
+    text-wrap: nowrap;
+    z-index: 20;
+    &:hover{
+        transform: scale(1.15);
+        background-color: $pPurple;
+    }
+}
+
+.green-shadow{
+    position: absolute;
+    left: -40px;
+    bottom: -400px;
+    width: fit-content;
+    z-index: 10;
+}
+
+@media (max-width: 2000px){
+    section{
+        padding: 0 $edgeDistance2000 80px $edgeDistance2000;
+    }
+}
+
+
+@media (max-width: 1200px){
+    section{
+        flex-direction: column-reverse;
+    }
+    .icons-container{
+        margin-top: 80px;
+    }
+    .text{
+        margin-left: 0;
+    }
+    .green-shadow{
+        opacity: 0.6;
+        top: -200px;
+    }
+}
+
+
+@media (max-width: 700px){
+    section{
+        padding: 0 $edgeDistanceMobile 80px $edgeDistanceMobile;
+    }
+    .green-shadow{
+        width: 220px;
+        top: 500px;
+    }
+}

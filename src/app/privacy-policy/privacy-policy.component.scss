@@ -1,0 +1,27 @@
+@import './../app.component.scss';
+
+h1{
+    font-size: 50px;
+    line-height: 60px;
+}
+
+h2{
+    font-size: 40px !important;
+    line-height: 45px;
+}
+
+section{
+    padding: 100px $edgeDistance;
+}
+
+@media (max-width: 2000px){
+    section{
+        padding: 50px $edgeDistance2000;
+    }
+}
+
+@media (max-width: 700px){
+    section{
+        padding: 50px $edgeDistanceMobile;
+    }
+}

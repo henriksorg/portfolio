@@ -1,0 +1,50 @@
+@import './../../app.component.scss';
+
+section{
+    border-top: 4px solid $pGreen;    
+    padding: 100px 100px;
+}
+
+.info{
+    @include dFlex($jc:space-between);
+}
+
+.henrik-font{
+    width: 200px;
+}
+
+.icons{
+    @include dFlex($g:42px);
+}
+
+.copyright{
+    @include dFlex($g:4px);
+}
+
+.copyright-icon{
+    filter: invert(1);
+    height: 16px;
+}
+
+.imprint{
+    font-size: 24px;
+    color: white !important;
+    :visited{
+        color: white !important;
+    }
+}
+
+@media (max-width: 900px){
+    .info{
+        flex-direction: column;
+        gap: 24px;
+    }
+    section{
+        padding: 20px 20px;
+    }
+    .imprint{
+        width: 100%;
+        text-align: center;
+        margin-top: 24px;
+    }
+}
