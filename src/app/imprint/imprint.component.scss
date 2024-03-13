@@ -2,9 +2,8 @@
 
 section{
     @include dFlex($fd:column, $jc:flex-start, $ai:flex-start, $g:16px);
-    padding: 100px $edgeDistance;
+    padding: 200px $edgeDistance ;
     box-sizing: border-box;
-    height: calc(100vh - 287px);
     span{
         font-size: 24px;
     }
@@ -16,12 +15,12 @@ section{
 
 @media (max-width: 2000px){
     section{
-        padding: 50px $edgeDistance2000;
+        padding: 100px $edgeDistance2000;
     }
 }
 
 @media (max-width: 700px){
     section{
-        padding: 50px $edgeDistanceMobile;
+        padding: 100px $edgeDistanceMobile;
     }
 }

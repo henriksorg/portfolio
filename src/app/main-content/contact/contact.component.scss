@@ -1,9 +1,9 @@
 @import './../../app.component.scss';
 
 section {
-    padding-top: 100px;
     position: relative;
     overflow: hidden;
+    padding: 50px $edgeDistance;
 }
 
 .headline {
@@ -25,7 +25,7 @@ section {
 
 .contact {
     @include dFlex($jc: space-between, $ai: flex-start);
-    padding: 100px $edgeDistance;
+    margin-top: 80px;
 }
 
 p {
@@ -45,7 +45,7 @@ input,
 textarea {
     background-color: #141D2F;
     border: 1px solid $pPurple;
-    border-radius: 3px;
+    border-radius: 12px;
     width: 30vw;
     font-size: 16px;
     color: white;
@@ -81,12 +81,19 @@ input[type="submit"] {
 input[type="submit"][disabled] {
     background-color: grey;
     cursor: not-allowed;
+
 }
 
 input[type="submit"]:enabled {
     background-color: $pGreen;
     cursor: pointer;
+    transition: all .125s;
+    &:hover {
+        transform: scale(1.1);
+        background-color: $pPurple;
+    }
 }
+
 
 .purple-shadow {
     position: absolute;
@@ -128,16 +135,18 @@ input[type="submit"]:enabled {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: 999;
-    a{
+    z-index: 20;
+
+    a {
         color: $pGreen;
-        &:visited{
+
+        &:visited {
             color: $pGreen;
         }
     }
 }
 
-.container p{
+.container p {
     line-height: 30px;
 }
 
@@ -196,28 +205,52 @@ input[type="submit"]:enabled {
     transform: rotate(45deg);
 }
 
+.arrow-up-container {
+    width: 100%;
+    box-sizing: border-box;
+    @include dFlex($jc: flex-end);
+    margin-top: 50px;
+}
+
+.arrow-up {
+    width: 35px;
+    border: white 2px solid;
+    padding: 1px;
+    border-radius: 50%;
+
+    &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0px 0px 1px #FFFFFF);
+    }
+
+    z-index: 20;
+}
+
 @media (max-width: 2000px) {
-    .contact {
+    section {
         padding: 100px $edgeDistance2000;
     }
+
     .border-div {
         width: $edgeDistance2000;
     }
 }
 
 @media (max-width: 700px) {
-    .contact {
+    section {
         padding: 50px $edgeDistanceMobile;
     }
+
     .border-div {
         width: $edgeDistanceMobile;
     }
 }
 
 @media (max-width: 900px) {
-    p{
+    p {
         max-width: unset;
     }
+
     .contact {
         flex-direction: column;
     }

@@ -10,11 +10,15 @@ section{
 }
 
 .henrik-font{
-    width: 200px;
+    height: 40px;
 }
 
 .icons{
     @include dFlex($g:42px);
+}
+
+.icons a:hover{
+    filter: drop-shadow(0px 0px .5px #FFFFFF);
 }
 
 .copyright{
@@ -32,19 +36,48 @@ section{
     :visited{
         color: white !important;
     }
+    width: fit-content;
+    margin-top: 8px;
+}
+
+.imprint a:after {
+    transition: all ease-in-out 0.12s;
+    background: none repeat scroll 0 0 rgb(255, 255, 255);
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    margin-top: 4px;
+}
+
+.imprint a:hover:after {
+    width: 100%;
 }
 
 @media (max-width: 900px){
+    section{
+        padding: 50px $edgeDistance2000 50px $edgeDistance2000;
+    }
     .info{
         flex-direction: column;
         gap: 24px;
     }
-    section{
-        padding: 20px 20px;
-    }
+
     .imprint{
         width: 100%;
         text-align: center;
         margin-top: 24px;
+    }
+}
+
+@media (max-width: 2000px){
+    section{
+        padding: 100px $edgeDistance2000 100px $edgeDistance2000;
+    }
+}
+
+@media (max-width: 700px){
+    section{
+        padding: 50px $edgeDistanceMobile 50px $edgeDistanceMobile;
     }
 }

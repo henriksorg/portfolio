@@ -4,7 +4,7 @@
         <h2>Contact</h2>
     </div>
     
-    <div class="contact">
+        <div class="contact">
         <div>
             <h3>Do you need a Frontend Developer, or would you like to learn more about me?</h3>
             <p>Feel free to contact me using the contact form for further information.</p>
@@ -29,10 +29,11 @@
 
             <input id="submit" type="submit" [disabled]="!contactForm.form.valid" value="Send message :)">
         </form>
+    </div>
+        <div class="arrow-up-container"><a href="#atf"><img class="arrow-up" src="./../../../assets/img/svg/arrow-down-line.svg" alt="scroll to top"></a></div>
         <div class="dialog" *ngIf="dialogOpen">
           <span>Thanks for contacting me! I will response in the next few days!</span>
         </div>
-    </div>
-    <img src="./../../assets/img/png/contact-purple.png" alt="" class="purple-shadow" >
+    <img src="./../../assets/img/png/contact-purple.png" alt="" class="purple-shadow">
     
 </section>

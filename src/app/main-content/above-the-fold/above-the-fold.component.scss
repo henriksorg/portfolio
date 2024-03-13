@@ -5,6 +5,7 @@ section {
     @include atfBg();
     background: #141D2F !important;
     z-index: 18;
+    scroll-margin: 200px;
 }
 
 .atf {
@@ -106,6 +107,14 @@ $iconGap: 32px;
 
 .contact-info {
     @include dFlex($jc: flex-start, $g: $iconGap);
+
+    a {
+        transition: filter .1s ease-in-out;
+        &:hover {
+            filter: drop-shadow(0px 0px .7px #FFFFFF);
+        }
+    }
+
 }
 
 .border-div {
@@ -211,13 +220,14 @@ $iconGap: 32px;
     .text-atf {
         margin-top: 0;
     }
+
     section {
         z-index: 21;
     }
 }
 
 @media (max-width: 600px) {
-    .purple-green-shadow{
+    .purple-green-shadow {
         width: 100vw;
         height: 150vw;
         object-fit: cover;
@@ -225,20 +235,24 @@ $iconGap: 32px;
 }
 
 
-@media (max-width: 520px){
-    
-    .henrik-font{
+@media (max-width: 520px) {
+    section {
+        padding-top: 30px;
+    }
+
+    .henrik-font {
         height: 40px;
     }
-    
-    .shape{
-        top: 70vw;
+
+    .shape {
+        top: 85vw;
     }
-    .img-atf{
+
+    .img-atf {
         height: unset;
-        width: 90vw ;
+        width: 90vw;
     }
-}   
+}
 
 @media (max-width: 500px) {
     .introduction {
@@ -281,8 +295,9 @@ $iconGap: 32px;
         font-size: 30px;
         margin-right: -10px;
     }
-    .shape{
-        top: 60vw;
+
+    .shape {
+        top: 75vw;
     }
 }
 
@@ -304,11 +319,12 @@ $iconGap: 32px;
         font-size: 26px;
         margin-right: -10px;
     }
-    .shape{
-        top: 50vw ;
+
+    .shape {
+        top: 75vw;
     }
-    .img-atf{
+
+    .img-atf {
         margin-top: 30px;
     }
 }
-
