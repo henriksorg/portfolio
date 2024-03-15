@@ -4,7 +4,14 @@
     <a href="#about-me" class="navigate">About me</a>
     <a href="#my-skills" class="navigate">Skills</a>
     <a href="#portfolio" class="navigate">Portfolio</a>
+    <div>
+    <button (click)="languageService.changeLanguage('de')" class="german">
+      <img src="./../../../assets/img/png/german.png" alt="german"></button>
+    <button (click)="languageService.changeLanguage('en')" class="english">
+      <img src="./../../../assets/img/png/english.png" alt="german"></button>
   </div>
+  </div>
+  
   <div class="burger-menu">
     <button mat-button [matMenuTriggerFor]="beforeMenu">
       <mat-icon>menu</mat-icon>
@@ -13,6 +20,10 @@
       <a mat-menu-item href="#about-me">About me</a>
       <a mat-menu-item href="#my-skills">Skills</a>
       <a mat-menu-item href="#portfolio">Portfolio</a>
+      <div class="language-menu"><button (click)="languageService.changeLanguage('de')" class="germanMenu">
+        <img src="./../../../assets/img/png/german.png" alt="german"></button>
+      <button (click)="languageService.changeLanguage('en')" class="englishMenu">
+        <img src="./../../../assets/img/png/english.png" alt="german"></button></div>
     </mat-menu>
   </div>
 </section>

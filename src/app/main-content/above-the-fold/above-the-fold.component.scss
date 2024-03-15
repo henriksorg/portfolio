@@ -6,15 +6,23 @@ section {
     background: #141D2F !important;
     z-index: 18;
     scroll-margin: 200px;
+    @include dFlex($fd:column, $ai:center)
+}
+
+.max-width-wrapper{
+    width: 100%;
+    max-width: 2000px;
+    position: relative;
 }
 
 .atf {
-    @include dFlex($jc: space-between);
+    @include dFlex($jc: space-around);
+    width: 100%;
 }
 
 .img-atf-container {
     z-index: 16;
-    width: 60vw;
+    // width: 60vw;
     @include dFlex();
 }
 
@@ -29,7 +37,8 @@ section {
 .text-atf {
     @include dFlex($fd: column, $jc: flex-start);
     flex: 1;
-    margin-left: -300px
+    max-width: 500px;
+    // margin-left: -300px
 }
 
 .introduction {
@@ -77,7 +86,6 @@ button {
         background-color: $pPurple;
     }
 }
-
 .shape {
     position: absolute;
     left: 0;
@@ -92,8 +100,17 @@ button {
     top: 0;
     left: 0;
     z-index: 15;
-    width: 60vw;
-    @include dFlex();
+    // width: 60vw;
+    width: 100%;
+    @include dFlex($jc:space-around);
+}
+
+.purple-green-shadow-container img{
+    margin-left: -150px;
+}
+
+.help-container{
+    width: 500px;
 }
 
 .below-atf {
@@ -118,7 +135,7 @@ $iconGap: 32px;
 }
 
 .border-div {
-    width: $edgeDistance - $iconGap;
+    width: calc($edgeDistance2000 - $iconGap) ;
     height: 4px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -140,7 +157,7 @@ $iconGap: 32px;
     margin-left: 8px;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 2200px) {
     .border-div {
         width: $edgeDistance2000 - $iconGap;
     }
@@ -160,6 +177,14 @@ $iconGap: 32px;
         left: 0;
         width: 100%;
         @include dFlex();
+    }
+
+    .purple-green-shadow-container img {
+        margin-left: 0;
+    }
+
+    .help-container{
+        display: none;
     }
 
     .purple-green-shadow {

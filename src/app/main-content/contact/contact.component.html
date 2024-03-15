@@ -6,8 +6,8 @@
     
         <div class="contact">
         <div>
-            <h3>Do you need a Frontend Developer, or would you like to learn more about me?</h3>
-            <p>Feel free to contact me using the contact form for further information.</p>
+            <h3>{{'contactQ' | translate}}</h3>
+            <p>{{'contactA' | translate}}</p>
         </div>
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <label for="name-input"></label>

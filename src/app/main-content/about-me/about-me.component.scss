@@ -40,14 +40,13 @@ section {
 }
 
 .border-container {
-    width: 25vw;
+    width: 30vw;
     height: 4px;
     background: $pGreen;
-
 }
 
 .personal-info {
-    @include dFlex($g: 24px, $jc:space-between);
+    @include dFlex($g: 24px, $jc:flex-start);
     margin-top: 32px;
     width: 30vw;
     img{
@@ -63,9 +62,12 @@ section {
     width: 650px;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 2200px) {
     section{
         padding-left: $edgeDistance2000;
+    }
+    .border-container {
+        width: 30vw;
     }
 }
 

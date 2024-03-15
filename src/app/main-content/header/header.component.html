@@ -1,0 +1,18 @@
+<section>
+  <img class="henrik-font" src="./../../assets/img/png/henrik-font.png" alt="Henrik">
+  <div class="menu-display">
+    <a href="#about-me">About me</a>
+    <a href="#my-skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+  </div>
+  <div class="burger-menu">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <a mat-menu-item href="#about-me">About me</a>
+      <a mat-menu-item href="#my-skills">Skills</a>
+      <a mat-menu-item href="#portfolio">Portfolio</a>
+    </mat-menu>
+  </div>
+</section>

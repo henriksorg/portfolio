@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { LanguageService } from './language-service/language.service';
 
+import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
-
+import AOS from "aos";
 
 @Component({
     selector: 'app-root',
@@ -17,8 +21,14 @@ import { HeaderComponent } from './shared/header/header.component';
         RouterOutlet,
         MainContentComponent,
         FooterComponent, 
-        HeaderComponent]
+        HeaderComponent,
+        TranslateModule
+      ]
 })
-export class AppComponent {
-  title = 'portfolio';
+export class AppComponent implements OnInit{
+  title = 'Henrik Sorg';
+  constructor  (private translate: TranslateService) { }
+  ngOnInit(): void {
+    AOS.init();
+  }
 }

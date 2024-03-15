@@ -2,7 +2,7 @@
 
 section{
     border-top: 4px solid $pGreen;    
-    padding: 100px 100px;
+    padding: 100px $edgeDistance;
 }
 
 .info{
@@ -70,7 +70,7 @@ section{
     }
 }
 
-@media (max-width: 2000px){
+@media (max-width: 2200px){
     section{
         padding: 100px $edgeDistance2000 100px $edgeDistance2000;
     }

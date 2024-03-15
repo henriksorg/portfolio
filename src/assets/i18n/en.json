@@ -1,5 +1,13 @@
 {
     "aboutMe": "I am a web developer from near Stuttgart. Through working on many projects during my training, I have gained a lot of practical experience in the last year. In addition to my skills in web development, I also have experience in test stand automation with LabVIEW. Thanks to my experience with various programming languages, I have become a versatile software developer in a relatively short period of time.",
     "lightBulb": "Every project is an important part of my journey in web development. It brings new ideas and I have a lot of fun creating them.",
-    "puzzlePiece": "In my work as a web developer, I see each project as an opportunity to learn something new and get better. I enjoy meeting the various requirements and finding creative solutions."
+    "puzzlePiece": "In my work as a web developer, I see each project as an opportunity to learn something new and get better. I enjoy meeting the various requirements and finding creative solutions.",
+    "mySkills" : "I have a lot of skills in web development. I can handle all aspects of creating websites, from designing user interfaces to implementing complex features. With these skills, I've successfully completed challenging projects. Those projects you can see down below in the next section.",
+    "portfolio" : "The following projects are the best of my work. Feel free to explore and try out the samples.",
+    "join" : "This project is a business app with a Kanban board and a contact book. It helps you organize tasks and save business contacts easily. It's good for keeping work and contacts simple and in one spot.",
+    "elPolloLoco" : "Through this game, I learned the basic principles of object-oriented programming. It's a jump and run game where Pepe uses his salsa bottles to beat small chickens and then a big boss at the end.",
+    "pokedex" : "This project is a web-based Pokédex, based on the PokéAPI, a simple library that provides and catalogues Pokémon information. It offers users a comprehensive look at Pokémon species, including their stats, abilities, and evolutionary stages.",
+    "contactQ" : "Do you need a Frontend Developer, or would you like to learn more about me?",
+    "contactA" : "Feel free to contact me using the contact form for further information.",
+    "Imprint" : "Imprint"
 }

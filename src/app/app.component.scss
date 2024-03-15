@@ -1,3 +1,5 @@
+
+
 @mixin dFlex($jc:center, $ai: center, $g: 0, $fd: row){
     display: flex;
     justify-content: $jc;
@@ -22,6 +24,6 @@ a:visited{
 
 $pPurple: #9747FF;
 $pGreen: #70E61C;
-$edgeDistance: 300px;
+$edgeDistance: calc((100vw - 2000px)/2);
 $edgeDistanceMobile: 20px;
 $edgeDistance2000: 100px;

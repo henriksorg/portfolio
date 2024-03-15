@@ -5,6 +5,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 
 import { Inject } from '@angular/core';
 
+import {TranslateService, TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -12,7 +13,7 @@ import { Inject } from '@angular/core';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, NgIf],
+  imports: [FormsModule, NgIf, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -42,6 +43,10 @@ export class ContactComponent {
     },
   };
 
+  constructor(private translate: TranslateService){
+
+  }
+
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
@@ -59,7 +64,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-      console.log('funktioniert');
       
     } 
   }

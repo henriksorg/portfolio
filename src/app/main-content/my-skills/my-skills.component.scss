@@ -7,7 +7,7 @@ section{
     @include dFlex($jc:space-between);
     padding: 0 $edgeDistance 80px $edgeDistance;
     position: relative;
-    z-index: 20;
+    z-index: 25;
 }
 
 .icons-container{
@@ -62,7 +62,7 @@ button{
     z-index: 10;
 }
 
-@media (max-width: 2000px){
+@media (max-width: 2200px){
     section{
         padding: 0 $edgeDistance2000 80px $edgeDistance2000;
     }
