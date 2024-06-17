@@ -33,7 +33,7 @@ export class ContactComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://henrik-sorg.de/sendMail.php',
+    endPoint: 'https://home.henrik-sorg.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
